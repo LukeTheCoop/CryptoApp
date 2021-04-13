@@ -324,5 +324,5 @@ def main(status):
 
 
 if __name__ == '__main__':
+	check_data()
 	main('')
-	#crypto_window('bitcoin')
