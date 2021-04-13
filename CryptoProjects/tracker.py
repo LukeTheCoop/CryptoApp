@@ -6,6 +6,14 @@ import json
 import pickle
 import threading
 
+def check_data():
+	try:
+		with open('TRACKED_CURRENCYS.pkl', 'rb') as pickle_file:
+			pickle.load(pickle_file)
+	except:
+		clear_tracked_list()
+
+
 def get_tracked_list():
 	with open('TRACKED_CURRENCYS.pkl', 'rb') as pickle_file:
 		tracked_list = pickle.load(pickle_file)
